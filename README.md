@@ -18,7 +18,7 @@ DB_TYPE=postgres
 DB_HOST=db
 DB_USERNAME=[desired username]
 DB_PASSWORD=[desired password]
-DB_NAME=gw2_crawler
+DB_NAME=timezone_crawler
 DB_PORT=5432
 ```
 
