@@ -1,0 +1,19 @@
+x-env: &env
+  environment:
+    - DB_NAME=${DB_NAME}
+    - DB_USERNAME=${DB_USERNAME}
+    - DB_PASSWORD=${DB_PASSWORD}
+    - DB_HOST=${DB_HOST}
+    - PORT=${CRAWLER_PORT}
+
+version: "3.5"
+services:
+  crawler:
+    image: ${DOCKER_REGISTRY:-}crawler${DEPLOY_TAG:-}
+    restart: always
+    build:
+      context: ./crawler
+    ports:
+      - "3001:3001"
+    env_file:
+      - .env

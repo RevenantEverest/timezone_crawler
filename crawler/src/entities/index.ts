@@ -1,0 +1,1 @@
+export { default as TimezoneData } from './TimezoneData.js';
